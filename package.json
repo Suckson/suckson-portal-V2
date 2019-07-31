@@ -1,0 +1,44 @@
+{
+  "name": "suckson-portal-v2",
+  "version": "1.0.0",
+  "description": "博客项目升级版",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Suckson/suckson-portal-V2.git"
+  },
+    "dependencies": {
+    "core-js": "^2.6.5",
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.3",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.9.0",
+    "@vue/cli-plugin-unit-jest": "^3.9.0",
+    "@vue/cli-service": "^3.9.0",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "keywords": [
+    "node",
+    "es6",
+    "js"
+  ],
+  "author": "suckson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Suckson/suckson-portal-V2/issues"
+  },
+  "homepage": "https://github.com/Suckson/suckson-portal-V2#readme"
+}
