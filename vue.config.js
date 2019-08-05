@@ -57,7 +57,7 @@ module.exports = {
         symbolId: 'icon-[name]'
       })
       .end()
-
+    
     config.module
       .rule('vue')
       .use('vue-loader')

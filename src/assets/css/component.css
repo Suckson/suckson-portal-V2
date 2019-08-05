@@ -1,0 +1,227 @@
+/* Header */
+.large-header {
+	position: relative;
+	width: 100%;
+	background: #333;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+	z-index: 1;
+}
+.demo-2 .large-header {
+	background-image: url('https://cdn.suckson.cn/img/bg2.jpg');
+	background-position: center bottom;
+}
+
+.demo-3 .large-header {
+	background: #7f8c8d;
+}
+
+.demo-4 .large-header {
+	background: #f9f1e9;
+}
+.main{
+	width: 70%;
+	height: 500px;
+	/*background: #000;*/
+	position: absolute;
+	top:15%;
+	left:15%;
+	margin: 0 auto;
+	z-index: 9999;
+	color: white;
+	opacity: 0.8; 
+}
+.main-logo h1{
+	text-align: center;
+	font-size: 7rem;
+	font-weight: 8rem;
+	font-family:"Helvetica";
+	letter-spacing: 5px;
+	text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+.main-logo  img{
+	width: 5rem;
+	height: 5rem;
+	display: block;
+	position: absolute;
+	top:6%;
+	right: 40%;
+}
+.main h2{
+    text-align: center;
+	font-size: 4rem;
+	font-weight: 8rem;
+	font-family:"Helvetica";
+	letter-spacing: 2px;
+	margin: -5rem 0rem 0 2rem ;
+	text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+.main h3{
+ text-align: center;
+	font-size: 4rem;
+	font-weight: 8rem;
+	font-family:"Helvetica";
+	letter-spacing: 2px;
+	margin: 0rem 0rem 0 2rem ;
+	text-shadow: 2px 2px 4px rgba(0,0,0,0.4);	
+}
+.main h4{
+	text-align: center;
+}
+.main h4 button{
+	width: 175px;
+	height: 65px;
+	background: rgba(0,0,0,0.2);
+	color:#fff;
+	border-radius:15px; 
+	font-family:"Helvetica";
+	margin: 0 15px;
+	border:1px solid #fff;
+	box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+
+}
+.main h4 button:hover{
+	background: rgba(0,0,0,0.1);
+	transition-duration: 0.2;
+}
+.main-title {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	color: #f9f1e9;
+	text-align: center;
+	top: 20%;
+	left: 30%;
+	-webkit-transform: translate3d(-50%,-50%,0);
+	transform: translate3d(-50%,-50%,0);
+}
+
+.demo-1 .main-title, 
+.demo-3 .main-title {
+	text-transform: uppercase;
+	font-size: 4.2em;
+	letter-spacing: 0.1em;
+}
+  
+
+
+.demo-2 .main-title::before {
+	content: '';
+	width: 20vw;
+	height: 20vw;
+	min-width: 3.5em;
+	min-height: 3.5em;
+	background-size: cover;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border-radius: 50%;
+	z-index: -1;
+	-webkit-transform: translate3d(-50%,-50%,0);
+	transform: translate3d(-50%,-50%,0);
+}
+
+.demo-4 .main-title {
+	font-size: 6em;
+	font-weight: 300;
+	padding: 10px 30px;
+	text-transform: uppercase;
+	color: #222;
+}
+
+.main-title .thin {
+	font-weight: 200;
+}
+.hiddenbtn1{
+ 	display: none;
+ }
+@media only screen and (max-width : 1200px) {
+.main h2{
+	display: none;
+}
+.main{
+	margin: 10% auto 10% auto;
+}
+.main-logo h1{
+	margin: -4rem 0 0 0;
+	font-size: 4rem;
+}
+.main-logo img{
+
+   width: 2.5rem;
+	height: 2.5rem;
+	display: block;
+	position: absolute;
+	top:-17%;
+	right: 42%;
+ }
+ .hiddenbtn1{
+ 	display: none;
+ }
+  .demo-2 .large-header {
+    background-position: 3% 50%;
+}
+}
+
+@media only screen and (max-width : 768px) {
+.main{
+	margin: 17% auto 10% auto;
+}
+.main-logo img{
+
+   width: 2rem;
+	height: 2rem;
+	display: block;
+	position: absolute;
+	top:-15%;
+	right: 41%;
+ }
+.hiddenbtn1{
+ 	display:none;
+ }
+.hiddenbtn{
+ 	display:none;
+ }
+ .demo-2 .large-header {
+    background-position: 3% 50%;
+}
+}
+@media only screen and (max-width : 420px) {
+ .demo-2 .large-header {
+    background-position: -73% 50%;
+}
+.main{
+	margin: 30% auto 0 auto;
+}
+.main-logo img{
+    width: 2rem;
+	height: 2rem;
+	display: block;
+	position: absolute;
+	top:-16%;
+	right: 30%;
+ }
+ .main-logo h1{
+ 	font-size: 3.5rem;
+ }
+.main h3{
+	display: none;
+ }
+ .main h4{
+ 	margin-top: -1%;
+ }
+ .main h4 button{
+    width: 145px;
+	height: 50px; 
+	margin:  15px auto;
+
+ }
+.hiddenbtn1{
+	display:block;
+	margin: 25px auto !important;
+ }
+ .hiddenbtn{
+ 	display:block;
+ }
+}
