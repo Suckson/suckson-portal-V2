@@ -1,11 +1,19 @@
-'use strict'
-const path = require('path')
+/*
+ * @Descripttion: 
+ * @version: 
+ * @Author: suckson
+ * @Date: 2019-08-04 13:46:41
+ * @LastEditors: suckson
+ * @LastEditTime: 2019-08-11 14:28:41
+ */
+const webPackSuckosnConfig = require('./build/webpack.suckson.config')
+const webPackBlogConfig = require('./build/webpack.blog.config.js')
+
 const defaultSettings = require('./src/settings.js')
 
-function resolve(dir) {
-  return path.join(__dirname, dir)
-}
-
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const path = require('path')
+'use strict'
 module.exports = {
   /**
    * You will need to set publicPath if you plan to deploy your site under a sub path,
@@ -14,98 +22,47 @@ module.exports = {
    * In most cases please use '/' !!!
    * Detail: https://cli.vuejs.org/config/#publicpath
    */
-  publicPath: '/',
-  outputDir: 'dist',
+  publicPath: './',
   assetsDir: 'static',
   lintOnSave: process.env.NODE_ENV === 'development',
   productionSourceMap: false,
+  pages: {
+    index: {
+      entry: 'src/main.js',
+      template: 'public/index.html',
+      webPackSuckosnConfig
+    },
+    blogold: {
+         entry: 'suckson-portal/js/index.js',
+         template: 'suckson-portal/index.html',
+         filename: 'blogold.html',
+         
+    },
+    blog: {
+      entry: 'suckson-blog/index.js',
+      template: 'public/blog.html',
+      filename: 'blog.html',
+      webPackBlogConfig
+   }
+  },
   devServer: {
     port: defaultSettings.PORT,
-    open: false,
-    overlay: {
+    open: true,
+    overlay: {// eslint 是否显示错误
       warnings: false,
       errors: true
     }
   },
-  configureWebpack: {
-    // provide the app's title in webpack's name field, so that
-    // it can be accessed in index.html to inject the correct title.
-    name: defaultSettings.title,
-    resolve: {
-      alias: {
-        '@': resolve('src')
-      }
-    }
+  css: {
+    sourceMap: true
   },
-  chainWebpack(config) {
-    config.plugins.delete('preload') // TODO: need test
-    config.plugins.delete('prefetch') // TODO: need test
-
-    // set svg-sprite-loader
-    config.module
-      .rule('svg')
-      .exclude.add(resolve('src/icons'))
-      .end()
-    config.module
-      .rule('icons')
-      .test(/\.svg$/)
-      .include.add(resolve('src/icons'))
-      .end()
-      .use('svg-sprite-loader')
-      .loader('svg-sprite-loader')
-      .options({
-        symbolId: 'icon-[name]'
-      })
-      .end()
-    
-    config.module
-      .rule('vue')
-      .use('vue-loader')
-      .loader('vue-loader')
-      .tap(options => {
-        options.compilerOptions.preserveWhitespace = true
-        return options
-      })
-      .end()
-
-    config
-    // https://webpack.js.org/configuration/devtool/#development
-      .when(process.env.NODE_ENV === 'development',
-        config => config.devtool('cheap-source-map')
-      )
-
-    config
-      .when(process.env.NODE_ENV !== 'development',
-        config => {
-          config
-            .plugin('ScriptExtHtmlWebpackPlugin')
-            .after('html')
-            .use('script-ext-html-webpack-plugin', [{
-            // `runtime` must same as runtimeChunk name. default is `runtime`
-              inline: /runtime\..*\.js$/
-            }])
-            .end()
-          config
-            .optimization.splitChunks({
-              chunks: 'all',
-              cacheGroups: {
-                libs: {
-                  name: 'chunk-libs',
-                  test: /[\\/]node_modules[\\/]/,
-                  priority: 10,
-                  chunks: 'initial' // only package third parties that are initially dependent
-                },
-                commons: {
-                  name: 'chunk-commons',
-                  test: resolve('src/components'), // can customize your rules
-                  minChunks: 3, //  minimum common number
-                  priority: 5,
-                  reuseExistingChunk: true
-                }
-              }
-            })
-          config.optimization.runtimeChunk('single')
-        }
-      )
+  configureWebpack: {
+    plugins: [
+      new CopyWebpackPlugin([{
+        from: path.join(__dirname, 'chaiheng'),
+        to: path.join(__dirname, 'dist'),
+        toType: 'dir'
+      }])
+    ]
   }
 }

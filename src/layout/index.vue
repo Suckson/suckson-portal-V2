@@ -1,3 +1,11 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: suckson
+ * @Date: 2019-08-05 21:27:09
+ * @LastEditors: suckson
+ * @LastEditTime: 2019-08-12 10:17:13
+ -->
 <template>
 <div>
     <div style="width:1200px;height:500px;background:rgba(245, 245, 245,0.8);margin: 0 auto;border-radius: 15px;">
@@ -11,7 +19,7 @@
         <su-button style="margin:15px;" type="danger">危险按钮</su-button>
         <su-button style="margin:15px;" type="dark">黑色按钮</su-button>
         <su-button style="margin:15px;" type="link">链接按钮</su-button>
-        <su-button style="margin:15px;" type="text">链接按钮</su-button>
+        <su-button style="margin:15px;" type="text">文字按钮</su-button>
        </div>
         <div>
         <su-button style="margin:15px;" plain>朴素按钮</su-button>
@@ -46,7 +54,7 @@
         <su-button style="margin:15px;" type="dark" circle>恒</su-button>
         <su-button style="margin:15px;" type="link" circle>恒</su-button>
        </div>
-        <div>
+       <div>
         <su-button style="margin:15px;" radius="1">自定义圆角</su-button>
         <su-button style="margin:15px;" type="primary" radius="2">自定义圆角</su-button>
         <su-button style="margin:15px;" type="secondary" radius="3">自定义圆角</su-button>
@@ -56,6 +64,30 @@
         <su-button style="margin:15px;" type="danger" radius="7">自定义圆角</su-button>
         <su-button style="margin:15px;" type="dark" radius="8">自定义圆角</su-button>
         <su-button style="margin:15px;" type="link" radius="9">自定义圆角</su-button>
+       </div>
+       <div>
+        <su-button style="margin:15px;"  btn3d>3D效果</su-button>
+        <su-button style="margin:15px;"  btn3d>3D效果</su-button>
+        <su-button style="margin:15px;" type="primary" btn3d-primary>3D效果</su-button>
+        <su-button style="margin:15px;"  type="success" btn3d-success>3D效果</su-button>
+         <su-button style="margin:15px;"  type="danger" btn3d-danger>3D效果</su-button>
+        <!-- <su-button style="margin:15px;" light>高光效果</su-button>
+        <su-button style="margin:15px;" light>高光效果</su-button>
+        <su-button style="margint:15px;" longshadow>长阴影效果</su-button>
+        <su-button style="margint:15px;" longshadow="right">长阴影效果</su-button>
+        <su-button style="margin:15px;"  longshadow="left">长阴影效果</su-button>
+        <su-button style="margin:15px;" disabled>禁用按钮</su-button>
+        <su-button style="margin:15px;" disabled>禁用按钮</su-button>
+        <su-button style="margin:15px;" disabled>禁用按钮</su-button> -->
+       </div>
+        <div>
+        <su-button style="margin:15px;">默认尺寸</su-button>
+        <su-button style="margin:15px;"  type="primary"  size="A">A型号</su-button>
+        <su-button style="margin:15px;"  type="primary" plain  size="B">B型号</su-button>
+        <su-button style="margin:15px;"  type="success" size="C">C型号</su-button>
+        <su-button style="margin:15px;"  type="success" plain size="D">D型号</su-button>
+        <su-button style="margin:15px;"  type="danger" size="E">E型号</su-button>
+        <su-button style="margin:15px;" type="danger" plain round size="F">F型号</su-button>
        </div>
     </div>
 </div>

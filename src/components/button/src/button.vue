@@ -1,3 +1,11 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: suckson
+ * @Date: 2019-08-06 11:16:49
+ * @LastEditors: suckson
+ * @LastEditTime: 2019-08-11 17:35:40
+ -->
 <template>
   <a
     v-if="url"
@@ -11,6 +19,7 @@
       {
         'is-plain' : plain,
         'is-round' : round,
+        'is-3d' : btn3d,
         'is-circle' : circle,
         'su-btn-fluid': fluid,
         'su-btn-disabled': disabled
@@ -35,15 +44,19 @@
     v-else
     class="su-btn"
     :class="[
-      size ? 'su-btn-' + size : '',
+      size ? 'su-btn-size-' + size : '',
       type ? 'su-btn-' + type : '',
       radius ? 'su-btn-radius-'+radius : '' ,
       {
         'is-plain' : plain,
+        'is-3d' : btn3d,
         'is-round' : round,
         'is-circle' : circle,
         'su-btn-fluid': fluid,
-        'su-btn-disabled': disabled
+        'su-btn-disabled': disabled,
+        'is-3d-primary': btn3dPrimary,
+        'is-3d-success': btn3dSuccess,
+        'is-3d-danger': btn3dDanger,
       }
     ]"
     @click="handleClick"
@@ -77,6 +90,10 @@ export default {
     plain: Boolean,
     round: Boolean,
     circle: Boolean,
+    btn3d:Boolean,
+    btn3dPrimary: Boolean,
+    btn3dSuccess: Boolean,
+    btn3dDanger: Boolean,
     radius: {
       type: String,
       default: ''

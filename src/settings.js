@@ -1,3 +1,11 @@
+/*
+ * @Descripttion: 
+ * @version: 
+ * @Author: suckson
+ * @Date: 2019-08-04 13:52:41
+ * @LastEditors: suckson
+ * @LastEditTime: 2019-08-10 17:09:03
+ */
 module.exports = {
 
   title: 'sucksonBlog',
@@ -19,5 +27,5 @@ module.exports = {
    * @description deafult dev port
    */
 
-  PORT: 8000
+  PORT: 8080
 }
