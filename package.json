@@ -1,7 +1,7 @@
 {
-  "name": "suckson-portal-v2",
+  "name": "sucksonUI"
   "version": "1.0.0",
-  "description": "博客项目升级版",
+  "description": "一个超级炫酷的UI组件库",
   "main": "index.js",
   "directories": {
     "doc": "docs"
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Suckson/suckson-portal-V2.git"
+    "url": "https://github.com/Suckson/sucksonUI"
   },
   "dependencies": {
     "animate.css": "^3.7.2",
