@@ -4,7 +4,7 @@
  * @Author: suckson
  * @Date: 2019-08-10 18:48:49
  * @LastEditors: suckson
- * @LastEditTime: 2019-08-11 14:24:29
+ * @LastEditTime: 2019-09-29 16:14:42
  */
 'use strict'
 const path = require('path')
@@ -21,7 +21,7 @@ const CONFIG = {
     name: defaultSettings.title,
     resolve: {
       alias: {
-        '@': resolve('src')
+        '@': resolve('./../src')
       }
     }
   },
