@@ -4,7 +4,7 @@
  * @Author: suckson
  * @Date: 2019-09-29 00:14:26
  * @LastEditors: suckson
- * @LastEditTime: 2019-09-29 16:48:42
+ * @LastEditTime: 2019-10-09 14:01:20
  */
 import Vue from 'vue'
 
@@ -14,7 +14,7 @@ import App from './App.vue'
 import router from './routers'
 import store from './store/store'
 import '@/icons' // icon
-
+import surequest from '@/utils/surequest/src/request.js'
 import sucksonUI from '../sucksonUI/suckson'  // 封装自己的UI库
 Vue.use(sucksonUI)
 
@@ -24,6 +24,7 @@ Vue.use(animated)
 import '@/assets/css/global.styl' // 当前项目的css
 
 Vue.config.productionTip = false
+console.log(surequest)
 
 new Vue({
   router,
